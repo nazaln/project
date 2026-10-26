@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Backend (Port 5000)",
+      "type": "npm",
+      "script": "dev:backend",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": [{ "regexp": "^$" }],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Initializing PathAble",
+          "endsPattern": "PathAble API running"
+        }
+      }
+    },
+    {
+      "label": "Start Frontend (Port 3000)",
+      "type": "npm",
+      "script": "dev:frontend",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": [{ "regexp": "^$" }],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "VITE",
+          "endsPattern": "ready in"
+        }
+      }
+    },
+    {
+      "label": "Run All Tests",
+      "type": "npm",
+      "script": "test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}
